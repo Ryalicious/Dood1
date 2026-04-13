@@ -1,0 +1,125 @@
+ 
+  <link rel="icon" type="image/x-icon" href="<a href="https://imgbb.com/"><img src="https://i.ibb.co.com/pXF6VgR/IMG-20241127-113711.png" alt="IMG-20241127-113711" border="0"></a> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="../assets/style.css?cache=696041190980"> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <div class="top"> 
+    <div class="logo"> 
+     <a href="/"></a> 
+    </div> 
+    <a href=""> 
+     <div class="">
+      
+     </div> </a> 
+    <div class="more"> 
+     <a href=""></a> 
+    </div> 
+   </div> 
+   <div class="video"> 
+    <div class="video-inner"> 
+     <video autoplay="" controls="" width="100%" id="video" src="https://mp4-cdn77.others-cdn.com/318bb2eb-8198-47a7-92ef-dd87ce9182d9/3/mp4_sd.mp4?secure=8X_q4HkH46WlktGi-__0uw==,1776079741"> 
+      <source type="video/mp4"> Your browser does not support the video tag. 
+     </video> 
+     <div id="video-error" class="video-error" style="display: none;">
+      Video could not be found.
+     </div> 
+    </div> 
+   </div> 
+    <hr />
+    <h0> </h1>
+    
+   <div class="as"> 
+
+    <div class="copyright">
+      
+     <span id="year"></span>
+    </div> 
+    <div class="legal"> 
+     <div class="item"> 
+      <a href="/terms-of-service"></a> 
+     </div> 
+     <div class="item"> 
+      <a href="/report"></a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Google tag (gtag.js) --> 
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BDP4EF6BCQ');
+    </script> 
+  <script>
+      document.getElementById('').textContent = new Date().getFullYear();
+    </script> 
+  <script>
+        var videoLink;
+        $(document).ready(function() {
+            function getParameterByName(name) {
+                name = name.replace(/[\[\]]/g, '\\$&');
+                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                    results = regex.exec(window.location.href);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+
+            var paramValue = getParameterByName('id');
+            if (paramValue) {
+                var fileType = '.mp4';
+          
+                if (paramValue.length === 9 && paramValue[8] === '2') {
+                    fileType = '.mov';
+                }
+                videoLink = 'https://cdn.videy.co/' + paramValue + fileType;
+                $('#video').attr('src', videoLink);
+                $('#ads-iframe').attr('src', 'https://ads3.videy.co/?url=' + encodeURIComponent(videoLink));
+            }
+        });
+    </script> 
+  <script>
+        const video = document.getElementById('video');
+        const errorMessage = document.getElementById('video-error');
+     
+        video.addEventListener('error', function(event) {
+          const error = video.error;
+          if (error && error.code === 4) {
+              errorMessage.style.display = 'block';
+              video.style.display = 'none';
+          }
+        });
+    </script> 
+  <script>
+$(document).ready(function() {
+  const uploader = localStorage.getItem('uploader') || 'false';
+  const url = 'https://ads-api.videy.co/api/ad_type?uploader=' + uploader;
+  $.get(url, function(response) {
+    try {
+      // Check if the response is already a JavaScript object
+      const data = typeof response === 'string' ? JSON.parse(response) : response;
+
+      if (data.type === 'scorch') {
+        $('#ads-iframe').show();
+      } else if (data.type === 'exo' || data.type === 'aads') {
+        const code = data.code;
+        $('.as').append(code);
+      }
+    } catch (error) {
+      console.error("Error parsing the JSON response:", error);
+    }
+  });
+});
+
+</script> 
+ </body>
+</html>
+
+   Copyright © 2024 TRUE DOMAIN PRIVACY,
+
+    
